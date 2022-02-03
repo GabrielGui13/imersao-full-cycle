@@ -24,7 +24,7 @@ sudo apt-get install zsh
 ```zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-* Instalar o [Powerline Fonts](https://github.com/powerline/fonts)
+* Instalar o [Powerline Fonts](https://github.com/powerline/fonts), precisa configurar para Windows Terminal e Visual Studio Code
 ```zsh
 # clone
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -35,6 +35,7 @@ cd fonts
 cd ..
 rm -rf fonts
 ```
+* Instalar a [fonte recomendada](https://github.com/romkatv/powerlevel10k/blob/master/font.md) para o powerlevel10k
 * Instalar o [PowerLevel10k Theme](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 ```zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -69,4 +70,9 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 ```zsh
 source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
+* Melhorar visualização das pastas (em ~/.p10k.zsh)
+```zsh
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
+```
+* [Configuração de Ícones](https://dev.to/codingones/a-better-shell-with-oh-my-zsh-1m0h) 
 * _Espaço para adicionar link de configuração do PowerLevel10k_
