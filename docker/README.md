@@ -72,6 +72,13 @@ docker rm $(docker ps -aq) -f
 Comando para [remoção](https://docs.docker.com/engine/reference/commandline/rm/) de containers. O segundo comando apaga todos os containers já executados (talvez o Ctrl + C não tenha apagado, e sim só dado stop nele) o '$(docker ps -aq)' é como um subcomando para mostrar todos, e o '-aq' é para mostrar apenas o id de todos, o '-f' do 'docker rm' é para forçar.
 
 ```zsh
+docker images
+docker rmi <image_name>
+docker rmi $(docker images) -f
+```
+'docker images' mostra todas as imagens, e os nomes dela, a partir disso o 'docker rmi <image_name>', para apagar a imagem especifica, e o outro para apagar todas
+
+```zsh
 docker run nginx
 ```
 [IMAGE] Cria um container com o motor 'nginx' de base, ele roda apenas dentro do container, ao acessar o localhost:80 no nosso computador, não funciona, já dentro do container com o 'bash', se executarmos 'curl localhost', ele encontra
@@ -112,3 +119,16 @@ Para publicar uma imagem no Docker Hub (necessita de configuração)
 docker-compose up
 ```
 Ferramenta que usa o docker para conseguir criar diversos containers ao mesmo tempo, através do 'docker-compose.yaml', pode criar um arquivo e definir dentro dele serviços, imagens, containers, etc. Ao entrar na pasta raiz do arquivo do docker compose, podemos rodá-lo com 'docker-compose up', e automaticamente ele dá run em todos os containers
+
+```zsh
+docker-compose -d --build
+```
+A flag [*'-d'*] eh para nao travar o terminal, ficar "detached", e rodar as coisas em segundo plano, e o '--build' eh para recriar as imagens, caso tenha alteracoes ou coisas do tipo
+
+```zsh
+docker-compose exec <docker-compose_container_name> <command> 
+docker-compose exec app bash 
+docker-compose exec mysql bash 
+(mysql -uroot -p fullcycle => para logar no mysql, dados definidos no main.go) 
+```
+Roda um comando dentro do container escolhido do docker-compose.yaml e executa o bash nele
