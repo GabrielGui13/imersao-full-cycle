@@ -75,4 +75,7 @@ source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
 ```
 * [Configuração de Ícones](https://dev.to/codingones/a-better-shell-with-oh-my-zsh-1m0h) 
+* [Configuração de Ícones 2](https://github.com/romkatv/powerlevel10k/issues/673)
+* [Ícones VCS do Git](https://github.com/Powerlevel9k/powerlevel9k/blob/master/README.md#vcs) podem ser mudados em 'my_git_formatter' no '~/.p10k.zsh'
+* [Font Awesome](https://fontawesome.com/) para achar mais ícones
 * _Espaço para adicionar link de configuração do PowerLevel10k_

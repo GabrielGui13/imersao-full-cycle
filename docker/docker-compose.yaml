@@ -1,0 +1,25 @@
+# Docker compose
+# ferramenta que usa o docker para conseguir criar diversos containers ao mesmo tempo, através do docker-compose.yaml
+# pode criar um arquivo e definir dentro dele serviços, imagens, containers
+
+# ao entrar na pasta raiz do arquivo do docker compose, podemos rodá-lo com 'docker-compose up'
+version: '3'
+
+services: 
+  nginx:
+    # container criado a partir da imagem do dockerfile com docker build
+    image: gabrielgui13/teste-nginx-docker
+    ports:
+      - "8000:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+
+  # ao chamar o docker-compose up, ele vai subir um mysql também
+  mysql:
+    image: mysql:5.7
+    volumes:
+      # ao rodar, vai puxar os arquivos sql do banco
+      - './mysqldata:/var/lib/mysql'
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "fullcycle"
