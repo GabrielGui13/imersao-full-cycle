@@ -1,3 +1,9 @@
+## Configuração Inlay Visual Studio Code
+Vai mostraros parâmetros e tipos de retorno da função
+
+* Você acessar File -> Preferences -> Settings -> User Settings e digitar na busca inlay
+* Marque todas as caixinhas que estirem desmarcadas.
+
 ## Configuração de ambiente do WSL (Windows Subsystem for Linux)
 * [Guia Docker para WSL2](https://github.com/codeedu/wsl2-docker-quickstart)
 * [Guia para configuração de terminal](https://www.youtube.com/watch?v=Voei5KJaeIA&t=23s)
