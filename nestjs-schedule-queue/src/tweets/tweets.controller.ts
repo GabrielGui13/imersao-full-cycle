@@ -22,7 +22,7 @@ export class TweetsController {
     return this.tweetsService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Patch(':id') // PUT vs PATCH => parecido com o put, 
   update(@Param('id') id: string, @Body() updateTweetDto: UpdateTweetDto) {
     return this.tweetsService.update(+id, updateTweetDto);
   }
